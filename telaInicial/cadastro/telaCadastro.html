@@ -3,100 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Tela de Cadastro</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color:/*#7a4f33*/#000;
+            box-shadow: 1px 1px 4px #977126;
+            height: 70px;
+            justify-content: space-between;
+            padding: 0 10%;
+        }
+        .img_sublogo{
+            width: 100px;
+            top:20px;
+          
+
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f5ec;       
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 30%;
+            background-color: #ded0b2;
+        }
+        legend{
+            border: 1px solid ;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            background-color:#f9f5ec ;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 15px;
+            
+
+        }
+
+    </style>
 </head>
 <body>
     <header>
-       
+       <div class="logo">
         <div class="sub_logo">
             <img src="Sublogo MB Modas PNG-02.png" class="img_sublogo"    alt="Sublogo MB">
         </div>
-   
-        <div class="box">
+       </div>
+    </header>
+        <div class="box" alt="digitar os dados do usuario">
          <form action="telainicial.html"c method="get" id="form">
            <fieldset> 
             <legend><b>Dados cadastrais</b></legend>
             <br>
 
             <div class="inputBox">
-                <input type="text" name="name" id="nome " class="inputUser">
                 <label for="nome">Nome completo</label>
+                <input type="text" name="name" id="nome " class="inputUser">               
             </div><br>
 
             <div class="inputBox">
-                <input type="text" name="number" id="number " class="inputUser">
                 <label for="number">CPF</label>
-            </div><br>
-
-            <div class="inputBox">
                 <input type="text" name="number" id="number " class="inputUser">
-                <label for="number">Telefone/celular</label>
+               
             </div><br>
 
             <div class="inputBox">
-                <input type="date" name="date" id="dataNascimento" class="inputUser">
-                <label for="date">Data de Nascimento</label>
+                <label for="number">Telefone/celular</label>
+                <input type="text" name="number" id="number " class="inputUser">                
             </div><br>
+
+            <!--<div class="inputBox">
+                <label for="date">Data de Nascimento</label><br>
+                <input type="date" name="date" id="dataNascimento" class="inputUser">                
+            </div><br>-->
 
             <h2>Endereço de Entrega</h2>
 
             <div class="inputBox">
-                <input type="number" name="cep" id="cep" class="inputUser">
                 <label for="number">CEP</label>
+                <input type="number" name="cep" id="cep" class="inputUser">                
             </div><br>
 
             <div class="inputBox">
-                <input type="text" name="nome" id="andress " class="inputUser">
                 <label for="nome">Rua</label>
+                <input type="text" name="nome" id="andress " class="inputUser">               
             </div><br>
 
             <div class="inputBox">
-                <input type="number" name="numero" id="numero " class="inputUser">
                 <label for="number">Número</label>
+                <input type="number" name="numero" id="numero " class="inputUser">                
             </div><br>       
 
             <div class="inputBox">
-                <input type="text" name="nome" id="complement " class="inputUser">
                 <label for="nome">complemento</label>
+                <input type="text" name="nome" id="complement " class="inputUser">                
             </div><br>
 
             <div class="inputBox">
-                <input type="text" name="nome" id="bairro " class="inputUser">
                 <label for="nome">Bairro</label>
+                <input type="text" name="nome" id="bairro " class="inputUser">                
             </div><br>
 
             <div class="inputBox">
-                <input type="text" name="nome" id="city" class="inputUser">
                 <label for="nome">Cidade</label>
+                <input type="text" name="nome" id="city" class="inputUser">                
             </div><br>
 
             <div class="inputBox">
-                <input type="text" name="nome" id="state " class="inputUser">
                 <label for="nome">Estado</label>
+                <input type="text" name="nome" id="state " class="inputUser">                
             </div><br>
              
           
             
 
             <div class="inputBox">
-                <input type="email" name="email" id="email " class="inputUser">
                 <label for="email">E-mail</label>
+                <input type="email" name="email" id="email " class="inputUser" data-rules="required">               
             </div><br>
 
             <div class="inputBox">
-                <input type="password" name="password" id="password " class="inputUser">
                 <label for="password">Crie uma senha</label>
+                <input type="password" name="password" id="password " class="inputUser">                
             </div><br>
 
             <div class="inputBox">
-                <input type="password" name="password" id="password " class="inputUser">
                 <label for="password">Repetir senha</label>
+                <input type="password" name="password" id="password " class="inputUser">                
             </div>
 
-            <input type="submit" name="submit" id="submit>"
-
+            <button>Enviar</button>
 
            
 
@@ -120,3 +174,6 @@
 
         </fieldset>
          </form>
+         <script src="cadastro.js"></script>
+ </body>
+ </html>        
