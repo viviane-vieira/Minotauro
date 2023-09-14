@@ -93,7 +93,28 @@ nav ul a{
 
 
 }
-.faca-mais-text p{
-    color: black;
+/* faca mais*/
+.faca-mais .container{
+    display: flex;
+    align-items: center;
+  
+}
+.faca-mais .faca-mais-text{
+    width: 50%;
+    padding:0 40px ;
+}
+.faca-mais .faca-mais-text h3{
+    font-size: 56px;
+}
+.faca-mais .faca-mais-text p{
+    margin: 5px 0 10px 0;
+}
+
+.faca-mais .faca-mais-img{
+    width: 50%;
+
+}
+.faca-mais .faca-mais-img img{
+    width: 100%;
 }
 
