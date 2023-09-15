@@ -112,9 +112,66 @@ nav ul a{
 
 .faca-mais .faca-mais-img{
     width: 50%;
+    
 
 }
 .faca-mais .faca-mais-img img{
     width: 100%;
+    border-radius: 30px;
+}
+/*parceiros*/
+.partners h3,
+.partners p{
+    text-align: center;
+}
+.partners .container img{
+    width: 150PX;
+}
+.partners .container div{
+    display:flex ;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+/*parceiros*/
+
+
+/*depoimentos*/
+.testmone h3{
+    text-align: center;
+
+}
+.testmone p{
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.testmone .card-item{       
+    background-color: #e8e2e2;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+
+
+}
+.testmone .card-item img{
+    border-radius: 100%;
+}  
+.testmone .card-item .name-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 15px;
+
+
+}
+.testmone .card-item .testmone-user{
+    font-size:15 px;
+    padding:0 15 ;
 }
 
+/**depoimentos/
