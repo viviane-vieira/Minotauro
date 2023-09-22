@@ -25,8 +25,78 @@
                   </svg>
             </button>
             <a href="/telaInicial/index.html">Home</a>
-            <a href="#">Cadastre-se</a>
-            <a href="#">Login</a>
+            <a href="#"><button id="abrirModal" class="btn1">Cadastre-se</button>
+                <!-- O Modal -->
+                <div id="modalCadastro" class="modal">
+                  <div class="modal-content">
+                    
+                    <!-- Cabeçalho do Modal -->
+                    <div class="modal-header">
+                      <h2>Tela de Cadastro</h2>
+                      <span class="close" id="fecharModal">&times;</span>
+                    </div>
+                    
+                    <!-- Corpo do Modal -->
+                    <div class="modal-body">
+                      <!-- Formulário de Cadastro -->
+                      <form>
+                        <div class="form-group">
+                          <label for="nome">Nome Completo: </label><br>
+                          <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Cep:</label><br>
+                            <input type="text" id="cep" name="cep" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="text">Endereço:</label><br>
+                            <input type="text" id="endereco" name="endereco" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="text">Bairro:</label><br>
+                            <input type="text" id="bairro" name="bairro" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="text">Estado:</label><br>
+                            <input type="text" id="estado" name="estado" required>
+                          </div>
+                        <div class="form-group">
+                          <label for="email">Email:</label><br>
+                          <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="senha">Senha:</label><br>
+                          <input type="password" id="senha" name="senha">
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Confirmar Senha:</label><br>
+                            <input type="password" id="senha" name="senha">
+                          </div>
+                        <button type="submit" class="btn2">Cadastrar</button>
+                      </form>
+                    </div>
+                    
+                  </div>
+                </div>           
+                 </a>          
+                                     
+            <a href="#"> <button id="openModalBtn">Login</button>
+
+              <div id="loginModal" class="modal1">
+                  <div class="modal-content1">
+                      <span class="close1">&times;</span>
+                      <h2>Login</h2>
+                      <form>
+                          <label for="username">Nome de usuário:</label>
+                          <input type="text" id="username" name="username" required>
+                          <br>
+                          <label for="password">Senha:</label>
+                          <input type="password" id="password" name="password" required>
+                          <br>
+                          <button type="submit">Entrar</button>
+                      </form>
+                  </div>
+              </div></a>
             <a href="#">Outlet</a>
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -50,6 +120,7 @@
               </section>
             </div> 
         </header>
+     <!--banner de vendas-->
             <section class="products" >
                 <div class="container">
                     <div class="products-text">
@@ -75,59 +146,118 @@
                 <div class="container">
                     <h3>Ofertas Imperdivéis</h3>
                     <p>Os melhores descontos pra você aproveitar!</p>
-                    <div class="row_cards">
+                    <div class="rows_cards">
+
                         <div class="row_cards_item">
                             <img src="/telaInicial/img/ultraboost001.jpg" alt=" tenis adidas ultraboost preto e branco.">
                              <p class="name_product"><strong>Tenis Adidas Ultraboost</strong></p>
+                             <div class="description_product">
+                             <p>para todos tipos de corrida</p>
+                             <p>disponiveis do 36 ao 41</p>
+                              <p>somente pés esquerdos</p>
                              <p class="value"><strong>R$599,99</strong></p>
+                            </div>
                              <button>Adicionar Carrinho</button>
                         </div>
-                    </div>
 
-                
-            
-
+                                 
+                      
            
-            
                     <!--card venda 2-->
                     
-                        <div class="row_cards_item">
-                            <img src="/telaInicial/img/ultraboost001.jpg" alt=" tenis adidas ultraboost preto e branco.">
-                             <p class="name_product"><strong>Tenis Adidas Ultraboost</strong></p>
-                             <p class="value"><strong>R$599,99</strong></p>
-                             <button>Adicionar Carrinho</button>
-                        </div>
-                    
-
-              
-            
-            <!--card venda 3-->
-            
                     
                         <div class="row_cards_item">
-                            <img src="/telaInicial/img/ultraboost001.jpg" alt=" tenis adidas ultraboost preto e branco.">
-                             <p class="name_product"><strong>Tenis Adidas Ultraboost</strong></p>
-                             <p class="value"><strong>R$599,99</strong></p>
+                            <img src="/telaInicial/img/pegasus40.jpg" alt=" tenis adidas ultraboost preto e branco.">
+                             <p class="name_product"><strong>Tenis Nike Pegasus 40</strong></p>
+                             <div class="description_product">
+                                <p>para todos tipos de corrida</p>
+                                <p>disponiveis do 34 ao 44</p>
+                                 <p>Pés esquerdos e direitos</p>
+                                 </div>
+                             <p class="value"><strong>R$499,99</strong></p>
                              <button>Adicionar Carrinho</button>
                         </div>
-                    
-
-                     <!--card venda 4-->
+                            
             
+                       <!--card venda 3-->
+            
+                    
+                        <div class="row_cards_item">
+                            <img src="/telaInicial/img/rancercarbo2.jpg" alt=" tenis adidas ultraboost preto e branco.">
+                             <p class="name_product"><strong>Tenis Fila Rancer carbo 2</strong></p>
+                             <div class="description_product">
+                                <p>para todos tipos de corrida</p>
+                                <p>disponiveis do 37 ao 43</p>
+                                 <p> Pés esquerdos e direitos</p>
+                             </div>
+                             <p class="value"><strong>R$599,99</strong></p>
+                             <button>Adicionar Carrinho</button>
+                        </div>                   
+                    
+                       <!--card venda 4-->
                      
                         <div class="row_cards_item">
-                            <img src="/telaInicial/img/ultraboost001.jpg" alt=" tenis adidas ultraboost preto e branco.">
-                             <p class="name_product"><strong>Tenis Adidas Ultraboost</strong></p>
+                            <img src="/telaInicial/img/nimbus25.jpg" alt=" tenis adidas ultraboost preto e branco.">
+                             <p class="name_product"><strong>Tenis Asics Gel Nimbus 25</strong></p>
+                             <div class="description_product">
+                                <p>para todos tipos de corrida</p>
+                                <p>disponiveis do 34 ao 41</p>
+                                 <p>somente pés esquerdos</p>
+                             </div>
+                             <p class="value"><strong>R$599,99</strong></p>
+                             <button>Adicionar Carrinho</button>
+                        </div>
+
+                        <!--card venda 5-->
+                        <div class="row_cards_item">
+                            <img src="/telaInicial/img/grafeno01.jpg" alt=" tenis adidas ultraboost preto e branco.">
+                             <p class="name_product"><strong>Tenis Olimpikus Corre Grafeno</strong></p>
+                             <div class="description_product">
+                                <p>para todos tipos de corrida</p>
+                                <p>disponiveis do 35 ao 43</p>
+                                 <p>somente pés direitos</p>
+                             </div>
+                             <p class="value"><strong>R$299,99</strong></p>
+                             <button>Adicionar Carrinho</button>
+                        </div>
+
+                        <!--card venda 6-->
+                        <div class="row_cards_item">
+                            <img src="/telaInicial/img/nitro.jpg" alt=" tenis adidas ultraboost preto e branco.">
+                             <p class="name_product"><strong>Tenis Puma Deviate Nitro 2</strong></p>
+                             <div class="description_product">
+                                <p>para todos tipos de corrida</p>
+                                <p>disponiveis do 36 ao 40</p>
+                                 <p>somente pés esquerdos</p>
+                             </div>
                              <p class="value"><strong>R$599,99</strong></p>
                              <button>Adicionar Carrinho</button>
                         </div>
                    
 
         
-             
                 </div>
-                    </div>
+                </div>
+            </div>
    </section>
+         <!-- politica de vendas--> 
+         <section class="regulations">
+            <div class="container">
+      
+              <h3>Conheça Nossos Parceiros</h3>
+              <p>pensando em um mundo cada vez melhor a Centauro iniciou uma parceria com grandes 
+                nomes do mercado como:</p>
+                <div>
+                  <img src="/telaInicial/img/fretegratis.png" alt="imagem de frete gratis">
+                  <img src="/telaInicial/img/parcelamento.jpg" alt="parcelamento até 10x sem juros">
+                  <img src="/telaInicial/img/50off.png" alt="50% mais barato">
+                  <img src="/telaInicial/img/app.jpg" alt="imagem aplicativo">
+                 
+                 
+                </div>
+            </div>
+          </section>  
+
 
 
 
