@@ -255,6 +255,7 @@ button:hover {
 
 
 }
+
 /*pagina vendas*/
 .products .container{
    
@@ -344,7 +345,7 @@ button:hover {
     text-align: center;
 }
 .regulations .container img{
-    width: 150PX;
+    width: 100PX;
 }
 .regulations .container div{
     display:flex ;
@@ -352,4 +353,8 @@ button:hover {
     justify-content: space-around;
    
 }
+
+
+
+
 
