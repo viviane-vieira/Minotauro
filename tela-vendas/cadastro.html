@@ -3,99 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <title>Cadastre-se</title>
-</head>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+       :root{
+           --bg-color:#e8e2e2;
+           --secondary-bg-color:#494A7D;
+           --primary-color :#fff;
+           --secondary-color:#25cc88;
+           --text-color:#8789af;
+           --border-color:#20235b;
 
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+        #checkout-page{
+           background-color: var(--bg-color);
+           color: var(--text-color);
         }
-
-        h2 {
-            text-align: center;
-            color: #333;
+        /*Message*/
+        #fade{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
         }
+        #fade .spinner-border{
+            width: 60px;
+            height: 60px;
+        }
+        .hide{
+            display: none !important;/*esconde tudo*/
+        }
+        #message{
+            width: 40%;
+        }
+        .alert.alert-light p{
+            border-bottom: 1px solid #333;
+            padding: 1.2em 0;
+        
 
-        form {
+        }
+        /*steps*/
+        #order-form-container{
+            padding: 1.5em;
+        }
+        #steps{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        .step{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
+        .step i{
+            background-color: var(--secondary-bg-color);
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius:50% ;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 0.3em;
         }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
+        .step .active{
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
         }
-
-        button {
-            padding: 10px;
-            background-color: #b90a0a;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
+        .step p{
+            color: var(--text-color);
         }
-
-        button:hover {
-            background-color: #0056b3;
+        .line{
+            border-bottom: 1px solid var(--border-color);
+            position: absolute;
+            top: 22.5px;
+            width:90% ;
+            left: 5%;
+            z-index: -1;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Cadastro</h2>
-        <form>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
 
-            <label for="text">Cep:</label>
-            <input type="text" id="cep" name="Cep" required>
+</head>   
+<body id="checkout-page">
+    <div id="fade" class="hide">
+    
+        <div id="loader" class="spinner-border text-info hide " role="status">
+            <span class="visually-hidden">Loading... </span><!--loading para carregar-->
 
-            <label for="text">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" required>
-
-            <label for="text">Numero:</label>
-            <input type="text" id="numero" name="numero" required>
-
-            <label for="text">Bairro:</label>
-            <input type="text" id="bairro" name="bairro" required>
-
-            <label for="text">Estado:</label>
-            <input type="text" id="estado" name="estado" required>
-
-            <label for="text">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
+        </div> 
+        <div id="message" class="hide">
+            <div class="alert alert-light" role="alert">
+                <h4>Mensagem:</h4>
+                <p>Texto da mensagem...</p>
+                <button id="clonse-message" type="button" class="btn btn-secondary">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <div id="order-form-container" class="container px-md-0">
+        <div id="steps" class="md-3 pb-md-3">
+            <div class="line"></div>
+            <div class="step">
+                <i class="bi bi-person active"></i>
+                <p class="d-none d-md-block">Criação de conta</p>
+            </div>
+            <div class="step">
+                <i class="bi bi-geo-alt active"></i>
+                <p class="d-none d-md-block">Endereço</p>
+            </div>
+            <div class="step">
+                <i class="bi bi-credit-card"></i>
+                <p class="d-none d-md-block">Pagamento</p>
+            </div>
+        </div>
+        <div id="form-header">
+            <h2>Cadastre o seu endereço</h2>
+            <p>Preencha os campos para podermos enviar os seus produtos</p>
+        </div>
     </div>
 
-
+    
+    
     
 </body>
 </html>
